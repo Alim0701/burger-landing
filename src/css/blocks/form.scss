@@ -1,0 +1,153 @@
+.form {
+  display: flex;
+
+  @include medium {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form__col {
+  width: 50%;
+  margin-left: 30px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @include medium {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 60%;
+  }
+
+  @include small {
+    width: 100%;
+
+    &:last-child {
+      .form__row {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.form__row {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.form__label {
+  flex: 1;
+  margin-left: 19px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.form__text {
+  color: #fff;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.form__input-style {
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid transparent;
+  padding: 7px 10px;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}
+
+.form__input-short {
+  text-align: center;
+}
+
+.form__textarea {
+  resize: none;
+  height: 118px;
+}
+
+.form__label-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 18px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.radio__real {
+  display: none;
+}
+
+.radio__style {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: $orange;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+}
+
+.radio__real:checked ~ .radio__style:before {
+  opacity: 1;
+}
+
+.check__real {
+  display: none;
+}
+
+.check__style {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    display: block;
+    background-image: url(../img/icons/check.png);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 9px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+}
+
+.check__real:checked ~ .check__style:before {
+  opacity: 1;
+}
+
+.error {
+  color: red;
+}

@@ -1,0 +1,43 @@
+.hero {
+  background-image: url(../img/bg/hero-bg.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero__container {
+  padding-bottom: 55px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+
+  @include medium {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.hero__content-left {
+  flex: 1 1 100%;
+}
+
+.hero__content-right {
+  margin-top: 45px;
+  margin-left: 10px;
+  flex: 1 1 50%;
+
+  @include medium {
+    margin-left: 0;
+  }
+}
+
+.hero__content-img {
+  width: 100%;
+
+  @include extra-small {
+    width: 85%;
+  }
+}

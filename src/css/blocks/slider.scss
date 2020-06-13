@@ -1,0 +1,101 @@
+.section__slider {
+  background-image: linear-gradient(
+    90deg,
+    rgb(249, 180, 59) 0%,
+    rgb(235, 140, 56) 48%,
+    rgb(249, 180, 59) 74%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__container {
+  position: relative;
+}
+
+.slider__item {
+  display: flex !important;
+  align-items: center;
+  position: relative;
+  max-width: 940px;
+
+  @include large {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slider__item-left {
+  position: relative;
+  flex: 1 1 100%;
+
+  @include large {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+  }
+}
+
+.slider__item-img {
+  width: 100%;
+}
+
+.slider__item-icon {
+  max-width: 100%;
+}
+
+.slider__item-right {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include large {
+    align-items: center;
+    width: 72%;
+    text-align: center;
+  }
+
+  @include extra-small {
+    width: 90%;
+  }
+}
+
+.slider__text {
+  color: #fff;
+  margin: 40px 0 30px 0;
+
+  @include medium {
+    margin: 30px 0 20px 0;
+  }
+}
+
+.slider__price {
+  font-family: "Gagalin";
+  color: $orange;
+  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+
+  @include small {
+    font-size: 24px;
+  }
+}
+
+.price__count {
+  font-size: 72px;
+
+  @include large {
+    font-size: 63px;
+  }
+
+  @include extra-small {
+    font-size: 50px;
+  }
+}

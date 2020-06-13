@@ -1,0 +1,59 @@
+.header__btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+
+  @include extra-small {
+    font-size: 10px;
+  }
+}
+
+.btn__order {
+  background-color: $orange;
+
+  &:hover {
+    background-color: $orange-hover;
+  }
+}
+
+.btn-slider {
+  margin-left: 30px;
+}
+
+.btn__review {
+  background-color: $black;
+
+  &:hover {
+    background-color: $black-hover;
+  }
+}
+
+.btn__reset {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.more {
+  @include small {
+    display: none;
+  }
+}
+
+.read {
+  display: none;
+
+  @include small {
+    display: block;
+  }
+}

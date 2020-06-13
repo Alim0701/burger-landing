@@ -1,0 +1,132 @@
+.team {
+  background-image: url(../img/bg/team-bg.jpg);
+  background-size: cover;
+  position: relative;
+
+  @include medium {
+    background-position: 50% 50%;
+  }
+}
+
+.team__absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 33, 34, 0.9);
+  width: 50%;
+
+  @include medium {
+    width: 100%;
+  }
+}
+
+.team__absolute {
+  padding: 115px 95px 0 95px;
+
+  @include medium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.team__list {
+  margin-top: 55px;
+}
+
+.team__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.team__item_active {
+  .team__name {
+    color: $yellow;
+
+    &:before {
+      transform: translateY(-50%) rotate(-180deg);
+      transform-origin: 50% 50%;
+    }
+  }
+
+  .team__desc {
+    height: 125px;
+
+    @include medium {
+      height: 210px;
+    }
+  }
+}
+
+.team__name {
+  font-family: "Gagalin";
+  font-weight: normal;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  position: relative;
+  transition: color 0.3s linear;
+
+  &:before {
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid $yellow;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%) rotate(0);
+    transition: transform 0.3s linear;
+    transform-origin: center center;
+  }
+
+  @include medium {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  @include small {
+    font-size: 20px;
+  }
+
+  @include extra-small {
+    font-size: 14px;
+  }
+}
+
+.team__desc {
+  display: flex;
+  margin-top: 15px;
+  max-width: 330px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s linear;
+
+  @include medium {
+    flex-direction: column;
+  }
+}
+
+.team__desc-info {
+  margin-left: 20px;
+
+  @include medium {
+    margin-left: 0;
+  }
+}
+
+.team__desc-title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.team__desc-text {
+  color: #fff;
+}

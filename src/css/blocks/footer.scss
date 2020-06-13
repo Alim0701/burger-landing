@@ -1,0 +1,25 @@
+.map {
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../img/bg/footer-bg.jpg);
+  background-size: cover;
+  z-index: 5;
+  padding: 10px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include extra-small {
+    flex-direction: column;
+    text-align: center;
+  }
+}

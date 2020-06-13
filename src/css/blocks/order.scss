@@ -1,0 +1,22 @@
+.order {
+  background-image: url(../img/bg/form-bg.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.order__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 45%;
+
+  @include medium {
+    height: 55%;
+  }
+
+  @include small {
+    height: 90%;
+  }
+}

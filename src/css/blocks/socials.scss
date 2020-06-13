@@ -1,0 +1,50 @@
+.socials {
+  @include extra-small {
+    margin-top: 10px;
+  }
+}
+
+.socials__list {
+  display: flex;
+}
+
+.socials__item {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.socials__icon {
+  width: 22px;
+  height: 22px;
+  fill: #585858;
+  transition: all 0.2s linear;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.socials__icon-vk {
+  &:hover {
+    fill: #597da3;
+  }
+}
+
+.socials__icon-fb {
+  &:hover {
+    fill: #3b5998;
+  }
+}
+.socials__icon-insta {
+  &:hover {
+    fill: #e1306c;
+  }
+}
+.socials__icon-tw {
+  &:hover {
+    fill: #00acee;
+  }
+}

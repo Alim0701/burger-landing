@@ -1,0 +1,15 @@
+.best {
+  background-image: url(../img/bg/best-bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+
+  @include medium {
+    background-position: 0 50%;
+  }
+
+  @include extra-small {
+    background-position: 60% 50%;
+  }
+}

@@ -1,0 +1,50 @@
+.ellipse {
+  width: 30px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: border-color 0.3s linear;
+
+  &:hover {
+    border-color: $yellow;
+
+    .circle {
+      background-color: $yellow;
+    }
+  }
+}
+
+.circle {
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  opacity: 0;
+  animation: circle 1.5s infinite linear;
+  transition: background-color 0.3s linear;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

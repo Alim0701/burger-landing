@@ -1,0 +1,27 @@
+.arrow-link {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.arrow__left-link {
+  left: -1.5%;
+}
+
+.arrow__right-link {
+  right: -1.5%;
+}
+
+.arrow {
+  width: 18px;
+  height: 30px;
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2px;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}

@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Ubuntu";
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.container {
+  max-width: 940px;
+  width: 95%;
+  margin: 0 auto;
+}

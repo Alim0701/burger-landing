@@ -1,0 +1,58 @@
+.hamburger__menu {
+  background-color: rgba(31, 33, 34, 0.98);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-100%);
+  transition: transform 0.4s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger__menu_active {
+  transform: translateY(0);
+}
+
+.humburger__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger__item {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.hamburger__link {
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
